@@ -42,6 +42,12 @@ PS C:\home> wsl --export Ubuntu C:\Ubuntu\Ubuntu.origin.tar
 # tarファイルから複製。ただし、ディストリビューション名・フォルダの重複は不可
 PS C:\home> wsl --import Ubuntu_sub C:\Ubuntu\SD C:\Ubuntu\Ubuntu.origin.tar 
 PS C:\home> wsl --distribution Ubuntu_sub --cd ~ --user <username>
+
+# ユーザー名:user, PC名:host
+user@host:~$ sudo nano /etc/profile
+~~~
+~~~diff
++ export LD_LIBRARY_PATH='/usr/lib/wsl/lib':LD_LIBRARY_PATH
 ~~~
 > この `Ubuntu_sub` を仮想環境として運用し、使い終わったら `登録解除` する。
 ---
