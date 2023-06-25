@@ -1,5 +1,5 @@
-# とりあえず stable diffusion
-とりあえず `stable diffusion` を動かしてみる。
+# とりあえず HF(hugging face) diffusers
+とりあえず `HF diffusers` を動かしてみる。
 
 ---
 ## 準備
@@ -8,7 +8,7 @@
 >> ユーザー名: `user`<br>
 >> PC名: `host`
 ---
-## Hugging Face から model をダウンロード
+## Hugging Face から HF diffusers 用の model をダウンロード
 https://huggingface.co/models
 ~~~sh
 user@host:~$ sudo apt update
@@ -16,6 +16,7 @@ user@host:~$ sudo apt install git-lfs
 user@host:~$ git lfs install
 user@host:~$ git clone https://huggingface.co/stabilityai/stable-diffusion-2-1 model/stabilityai/stable-diffusion-2-1 
 ~~~
+> 余計なファイルが多く、サイズも大きいのが困りもの
 ---
 ## stable diffusion
 
@@ -24,7 +25,7 @@ user@host:~$ git clone https://huggingface.co/stabilityai/stable-diffusion-2-1 m
 user@host:~$ sudo apt update
 user@host:~$ sudo apt install python3-pip
 user@host:~$ sudo -H python3 -m pip install -U pip pstuil setuptools wheel
-user@host:~$ sudo -H python3 -m pip install -U accelerate diffusion torch transformers triton
+user@host:~$ sudo -H python3 -m pip install -U accelerate diffusers torch transformers triton
 ~~~
 
 ### 実行
