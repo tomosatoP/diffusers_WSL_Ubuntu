@@ -47,7 +47,7 @@ PS C:\home> wsl --distribution Ubuntu_sub --cd ~ --user <username>
 user@host:~$ sudo nano /etc/profile
 ~~~
 ~~~diff
-+ export LD_LIBRARY_PATH='/usr/lib/wsl/lib':LD_LIBRARY_PATH
++ export LD_LIBRARY_PATH=/usr/lib/wsl/lib:$LD_LIBRARY_PATH
 ~~~
 > この `Ubuntu_sub` を仮想環境として運用し、使い終わったら `登録解除` する。
 ---
